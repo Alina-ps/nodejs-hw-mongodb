@@ -1,5 +1,6 @@
 import { Router } from 'express';
 import {
+  createStudentController,
   getContactByIdController,
   getContactsController,
 } from '../controllers/contacts.js';
@@ -9,5 +10,6 @@ const router = Router();
 
 router.get('/contacts', ctrlWrapper(getContactsController));
 router.get('/contacts/:contactId', ctrlWrapper(getContactByIdController));
+router.post('contacts', ctrlWrapper(createStudentController));
 
 export default router;
