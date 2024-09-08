@@ -30,7 +30,15 @@ export const getContactByIdController = async (req, res, next) => {
   });
 };
 
-export const createStudentController = async (req, res) => {
+export const createStudentController = async (req, res, next) => {
+  const { name, phoneNumber, email, isFavourite, contactType } = req.body;
+
+  if (!name || !phoneNumber || !contactType) {
+    return next(
+      createHttpError(400, 'Name, phoneNumber, and contactType are required'),
+    );
+  }
+
   const contact = await createContact(req.body);
 
   res.status(201).json({
