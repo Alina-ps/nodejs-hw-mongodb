@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import {
-  createStudentController,
+  createContactController,
   deleteContactController,
   getContactByIdController,
   getContactsController,
@@ -26,7 +26,7 @@ router.get('/:contactId', isValidId, ctrlWrapper(getContactByIdController));
 router.post(
   '/',
   validateBody(createContactSchema),
-  ctrlWrapper(createStudentController),
+  ctrlWrapper(createContactController),
 );
 
 router.patch(
