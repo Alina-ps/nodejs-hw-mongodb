@@ -35,9 +35,9 @@ export const setupServer = () => {
 
   app.use(router);
 
-  app.use(errorHandler);
-
   app.use('*', notFoundHandler);
+
+  app.use(errorHandler);
 
   app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
