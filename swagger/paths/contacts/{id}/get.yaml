@@ -1,8 +1,8 @@
 tags:
   - Contacts
-summary: Get contact by ID under userId
+summary: Get contact by id under userId
 operationId: getContact
-description: 'Retrieve a contact by its ID, specified under a particular user.'
+description: 'Retrieve a contact by its id, specified under a particular user.'
 security:
   - bearerAuth: []
 parameters:
