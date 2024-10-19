@@ -14,7 +14,7 @@ parameters:
       example: '66f19ff0bcd4dd2171ec0d22'
 responses:
   '204':
-    description: No content
+    description: Successfully deleted
   '404':
     $ref: ..\..\..\components\responses\404.yaml
   '401':

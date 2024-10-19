@@ -1,0 +1,50 @@
+tags:
+  - Auth
+summary: Log in a user
+operationId: LoginUser
+description: 'Log in a user and return accessToken'
+security:
+  - bearerAuth: []
+requestBody:
+  content:
+    multipart/form-data:
+      schema:
+        type: object
+        required:
+          - email
+          - password
+        properties:
+          email:
+            description: "User's email"
+            type: string
+            example: 'john_doe@gmail.com'
+          password:
+            description: "User's password"
+            type: string
+            example: '1234'
+responses:
+  '200':
+    description: 'Successfully logged in a user!'
+    content:
+      application/json:
+        schema:
+          type: object
+          required:
+            - status
+            - message
+            - data
+          properties:
+            status:
+              type: integer
+              example: 200
+            message:
+              type: string
+              example: Successfully logged in a user!
+            data:
+              type: object
+              properties:
+                accessToken:
+                  type: string
+                  example: L1JycM2DcM9VgnzMpFm7QVYHdd7btMOsxlrnO4av
+  '400':
+    description: 'Bad request'
