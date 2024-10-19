@@ -9,9 +9,11 @@ info:
 tags:
   - name: Contacts
     description: Operations about contacts.
+  - name: auth
+    description: Auth operations.
 servers:
   - url: http://localhost:3000
-  - url: '#посилання на задеплоєний сайт'
+  - url: https://nodejs-hw7-swagger-yhrl.onrender.com
 paths:
   /auth/login:
     post:
