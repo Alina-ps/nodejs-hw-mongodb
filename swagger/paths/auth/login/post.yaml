@@ -15,13 +15,14 @@ requestBody:
           - password
         properties:
           email:
-            description: "User's email"
+            description: "User's email address"
             type: string
+            format: email
             example: 'john_doe@gmail.com'
           password:
             description: "User's password"
             type: string
-            example: '1234'
+            example: 'password123'
 responses:
   '200':
     description: 'Successfully logged in a user!'
