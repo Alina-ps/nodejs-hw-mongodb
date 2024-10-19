@@ -31,6 +31,7 @@ responses:
               type: string
               example: Successfully found contact with id 66f19ff0bcd4dd2171ec0d22!
             data:
+              type: object
               $ref: ..\..\..\components\schemas\contacts.yaml
   '404':
     $ref: ..\..\..\components\responses\404.yaml
