@@ -1,6 +1,6 @@
 tags:
   - Contacts
-summary: Update contact by id under userId
+summary: Update contact by id
 operationId: updateContact
 description: 'Update a contact by its id, specified under a particular user.'
 security:
@@ -71,3 +71,5 @@ responses:
               $ref: ..\..\..\components\schemas\contacts.yaml
   '404':
     $ref: ..\..\..\components\responses\404.yaml
+  '401':
+    $ref: ..\..\..\components\responses\401.yaml

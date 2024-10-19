@@ -1,6 +1,6 @@
 tags:
   - Contacts
-summary: Delete contact by id under userId
+summary: Delete contact by id
 operationId: deleteContact
 description: 'Remove a contact by its id, specified under a particular user.'
 security:
@@ -17,3 +17,5 @@ responses:
     description: No content
   '404':
     $ref: ..\..\..\components\responses\404.yaml
+  '401':
+    $ref: ..\..\..\components\responses\401.yaml
